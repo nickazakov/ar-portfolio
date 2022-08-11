@@ -1,0 +1,546 @@
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/favicon" href="img/favicon-32x32.png">
+
+    <!-- Background Gradient Script -->
+    <script src="gradient.js"></script>
+
+    <title>I'm @nickazak 🚀 | kzkv.online</title>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- Background Gradient Styles [KEEP ON HTML] -->
+<style>
+#gradient-canvas {
+    --gradient-color-1: #0d0347;
+    --gradient-color-2: #154609;
+    --gradient-color-3: #22d499;
+    --gradient-color-4: #0080f8;
+}
+
+#gradient-canvas2 {
+    --gradient-color-1: #cc165c;
+    --gradient-color-2: #66eb45;
+    --gradient-color-3: #c9b929;
+    --gradient-color-4: #7ab8f3;
+}
+</style>
+
+<body>
+
+<!-- Maintenance Popup 
+<div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0; bottom: 0; z-index: 100; height: 120vh; width: 100vw; backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px); overflow: none;">
+<div style="padding: 25px;">
+    <h1 style="color: #fff;">Hi there. This part of the website is currently down for maintenance.</h1>
+    <p style="color: #fff;">Shaping the future. One AR experience at a time.</p>
+    <div style="height: 60px;"></div>
+    <a style="color: #fff; text-decoration: none;" href="mailto:nicolakazakov@gmail.com">Need help now? <b style="text-decoration: underline;">nicolakazakov@gmail.com</b></a>
+</div>
+</div> -->
+
+<!-- Gradient Canvas -->
+<canvas onclick="" id="gradient-canvas"></canvas>
+
+<canvas  onclick="portfolio()" id="gradient-canvas2"></canvas>
+<h1 class="w">N</h1>
+
+
+<!-- Fade Black Background -->
+<div id="fader"></div>
+
+<!-- Header -->
+<header>
+    <!-- Logo -->
+    <!-- <img class="logo" src="nickazakovlogo.png" alt="" width="130px"> -->
+    <div>
+        <p class="logo-text""> <b>@nickazak</b>&#128075 </p>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <nav id="content-desktop">
+        <ul>
+            <li><a onclick="about()" >Me</a></li>
+            <li><a onclick="portfolio()" >Work</a></li>
+            <li><a onclick="resources()" >Resources</a></li>
+            <li><a onclick="recognition()" >Recognition</a></li>
+            <li><a onclick="blog()" >Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <div id="content-desktop" class="transpill" onclick="ctaclick()">
+        <a href="#" class="cta">Get in touch</a>
+        <span class="material-icons">chevron_right</span>
+    </div>
+
+    <!-- Mobile Navbar -->
+    <div id="content-mobile">
+
+        <!-- Mobile Burger Menu -->
+        <div onclick="" id="mobile-pill-menu" class="transpill">
+            <span class="material-icons-round" id="act">menu</span>
+        </div>
+        
+        <!-- Burger Dropdown -->
+        <div class="dropdown-area">
+            <div class="dropdown-menu">
+
+                <!-- Item #1 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">chevron_right</span>
+                    <a class="dropdown-items">Get in touch</a>
+                </div>
+                
+                <div class="stripe"></div>
+
+                <!-- Item #2 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">home</span>
+                    <a class="dropdown-items">Home</a>
+                </div>
+
+                <!-- Item #3 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">dashboard</span>
+                    <a class="dropdown-items">Portfolio</a>
+                </div>
+
+                <!-- Item #4 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">view_in_ar</span>
+                    <a class="dropdown-items">Augmented Reality</a>
+                </div>
+
+                <!-- Item #5 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">article</span>
+                    <a class="dropdown-items">Blog</a>
+                </div>
+
+                <!-- Item #6 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">favorite</span>
+                    <a class="dropdown-items">About</a>
+                </div>
+
+                <div class="stripe"></div>
+
+                <!-- Item #7 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">code</span>
+                    <a class="dropdown-items">Business Resources</a>
+                </div>
+
+                <!-- Item #8 -->
+                <div>
+                    <span class="material-icons" style="padding-left: 10px; vertical-align: -5.5px;">help_outline</span>
+                    <a class="dropdown-items">Support</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Page Content -->
+<div id="main-page">
+        <!--<div class="container">
+
+            <div class="card">
+                <div class="preview-mask">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="prev.mp4" type="video/mp4">
+                    </video>
+                </div>
+              <h3 class="title">Submerged Video</h3>
+            </div>
+
+            <div class="card">
+                <div class="preview-mask">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="prev-frosty-ring-toss.mp4" type="video/mp4">
+                    </video>
+                </div>
+              <h3 class="title">Frosty Ring Toss</h3>
+            </div>
+
+            <div class="card">
+                <div class="preview-mask">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="Preview.mp4" type="video/mp4">
+                    </video>
+                </div>
+              <h3 class="title">Friendship Day</h3>
+            </div>
+
+        </div>-->
+
+
+        
+        <div id="landing content" style="display: flex; align-items: flex-start; flex-direction: column;">
+            <h1 style="display: inline; color: #fff; font-size: 70px; z-index: 0; text-shadow: -1rem 0 3rem rgba(0, 0, 0, 1); margin-top: 35vh;" id="about">Hi! I'm Nikola</h1>
+            <h2 style="color: #c1e2c8; font-size: 60px; z-index: 0; text-shadow: -1rem 0 5rem rgba(0, 0, 0, 1); margin-bottom: 10px;">Augmented Reality Designer</h2>
+
+            <!--<div class="stat-container">
+
+                <div class="stat">
+                    <span id="views">0</span>&nbspM+
+                </div>
+
+                <div class="stat">
+                    <span id="plays">0</span>&nbspM+
+                </div>
+
+                <div class="stat">
+                    <span id="playtime">0</span>&nbspY+
+                </div>
+            </div>-->
+
+            <!--<div class="gradient-rounded-border">
+                <img class="portfolio-pfp" src="pfp.png" width="150px">
+            </div>-->
+
+            <h4 class="normal-font-w">
+                I was born and raised in Sofia, Bulgaria, and I've always loved visualising.
+            </h4>
+            <h4 class="normal-font-w">
+                I'm currently a computer science student while also shaping the future
+            </h4>
+            <h4 class="normal-font-w">
+                as a Lens Developer in Snap Inc. 📐👻
+            </h4>
+
+            <img src="me.png" width="900px" style="border-radius: 10px; margin-top: 50px;">
+
+            <h2 style="color: #fff; font-size: 50px; z-index: 0; text-shadow: -1rem 0 3rem rgba(0, 0, 0, 1);" id="portfolio">Work</h2>
+            <div class="portfolio">
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Friendship Day '22</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=141825c6d7bf4de0a67cb1f5c9d7e049&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/Preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Plant Streak</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=118edacec1f14c168b6a5a41d1dc3546&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/plantstreak-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Me-Shirt</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=35d3de307d4d47ce993744607f246880&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/meshirt-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Frosty Ring Toss</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=94edd0b911cb4ba88c2ee0e5f0caa134&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/frosty-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Hajj Festival '22</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=cea914c08a6e43efa0169fe1895a0a58&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/hajj-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Easter '21</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=4cdbb1035f354de4a83aeef375b8a8af&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/easter21-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Back To School '21</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=86463214d5b84085a2f01625f60529d5&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/bts21-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Back To School '22</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=492e0457007e42ccb3d27f8e7daf2da3&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/bts-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Brass Monarch</p>
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=9eea78e063db43df9ac9581b7ee7c0df&metadata=01" target="_blank" class="try-hint-snapchat button">&#128377;&#65039; Try in Snapchat</a>
+                        <a href="#" class="try-read-blog button">&#x1F6E0;&#xFE0F; Development</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/brass-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- YOUR PROJECT -->
+                <div class="lens-card">
+                    <p class="preview-loading">Loading preview...</p>
+                    <div class="try-lens" id="info">
+                        <p class="try-title">Your Idea</p>
+                        <a href="#" onclick="ctaclick()" class="try-black button-2">&#128140; Contact me</a>
+                        <a href="#" onclick="recognition()" class="try-why button-2">&#129320; Why me?</a>
+                    </div>
+                    <div class="preview-mask" style="z-index: 1;">
+                        <video class="preview-video" autoplay muted loop>
+                            <source src="img/lens-previews/preview-collaboration.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 style="color: #fff; font-size: 50px; z-index: 0; text-shadow: -1rem 0 3rem rgba(0, 0, 0, 1);" id="resources">Resources</h2>
+            <div class="resources">
+
+                <div class="resource r1">
+                    <div class="blur"></div>
+                    <div class="resource-header">
+                        <p class="resource-title">Debugger Window</p>
+                    </div>
+                    <p class="resource-description">This handy Lens Studio prefab allows you to debug variables with an internal gUI.</p>
+                    <div class="resource-buttons">
+                        <a href="res/Debugger v1.2.lso" download class="resource-button">Download</a>
+                        <a href="https://github.com/nickazakov/lens-studio-utilities/tree/main/Debugger%20Window" target="_blank" class="resource-button">GitHub Page</a>
+                        <a class="resource-button">How to use?</a>
+                    </div>
+                </div>
+
+                <div class="resource r2">
+                    <div class="blur"></div>
+                    <div class="resource-header">
+                        <p class="resource-title">Retro Pixelization</p>
+                    </div>
+                    <p class="resource-description">Easily develop retro style experiences in Lens Studio.</p>
+                    <div class="resource-buttons">
+                        <a href="res/Retro Pixel Camera.lso" download class="resource-button">Download</a>
+                        <a href="https://github.com/nickazakov/lens-studio-utilities/tree/main/Retro%20Pixelization%20Effect" target="_blank" class="resource-button">GitHub Page</a>
+                        <a class="resource-button">How to use?</a>
+                    </div>
+                </div>
+                
+                <div class="resource r3">
+                    <div class="resource-header">
+                        <p class="resource-title">Connected Engine</p>
+                        <p class="r-t-b resource-tag">In Development</p>
+                    </div>
+                    <p class="resource-description">Making the development of connected experiences in Lens Studio a simple process.</p>
+                    <div class="resource-buttons">
+                        <a class="resource-button-grey">Download</a>
+                        <a class="resource-button-grey">GitHub Page</a>
+                        <a class="resource-button-grey">How to use?</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 style="color: #fff; font-size: 50px; z-index: 0; text-shadow: -1rem 0 3rem rgba(0, 0, 0, 1);" id="recognition">Recognition</h2>
+
+            <div class="recognition">
+
+                <!--<div class="event">
+                    <div>
+                        <p class="event-title">Lensathon Winner '22</p>
+                        <p class="event-author">By <a href="https://devpost.com/">Devpost</a></p>
+                    </div>
+                    <a class="view-links-button">Read</a>
+                </div>-->
+
+                <div class="event e1">
+                    <div>
+                        <p class="event-title">Pride Lens Selection '21</p>
+                        <p class="event-author">By <a href="https://lenslist.co/">Lenslist</a></p>
+                    </div>
+                    <a href="https://blog.lenslist.co/2021/06/24/lenslist-snapchat-lens-pride-selection/" target="_blank" class="view-links-button">Read</a>
+                </div>
+
+                <div class="event e2">
+                    <div>
+                        <p class="event-title">Earth Day '21</p>
+                        <p class="event-author">By multiple authors</p>
+                    </div>
+                    <a href="https://45secondes.fr/earth-day-2021-comment-partager-les-objectifs-earth-day-ar-et-bitmoji-sur-snapchat/" target="_blank" class="view-links-button">Read</a>
+                </div>
+
+                <div class="event e3">
+                    <div>
+                        <p class="event-title">8 Snap Lens Creators</p>
+                        <p class="event-author">By <a href="https://lenslist.co/">Lenslist</a></p>
+                    </div>
+                    <a href="https://blog.lenslist.co/2021/05/19/8-snapchat-lens-creators-you-should-know-may-2021/" target="_blank" class="view-links-button">Read</a>
+                </div>
+                
+                <div class="event e4">
+                    <div>
+                        <p class="event-title">Creator Spotlight '20</p>
+                        <p class="event-author">By <a href="https://lenslist.co/">Lenslist</a></p>
+                    </div>
+                    <a href="https://blog.lenslist.co/2020/10/06/creator-spotlight-nick-kazakov/" target="_blank" class="view-links-button">Read</a>
+                </div>
+
+                <div class="event e5">
+                    <div>
+                        <p class="event-title">Lens Selection August '21</p>
+                        <p class="event-author">By <a href="https://lenslist.co/">Lenslist</a></p>
+                    </div>
+                    <a href="https://blog.lenslist.co/2021/09/02/snapchat-lens-selection-august/" target="_blank" class="view-links-button">Read</a>
+                </div>
+
+                <div class="event e6">
+                    <div>
+                        <p class="event-title">Competition Winner '20</p>
+                        <p class="event-author">By <a href="https://www.talenthouse.com/">Talenthouse</a></p>
+                    </div>
+                    <a href="https://www.talenthouse.com/articles/staff-picks-snap-lens-studio-ar-creative-brief" target="_blank" class="view-links-button">Read</a>
+                </div>
+                
+                <div class="event e7">
+                    <div>
+                        <p class="event-title">16 AR Fashion Outfits '21</p>
+                        <p class="event-author">By <a href="https://www.popul-ar.com/">Popul-AR</a></p>
+                    </div>
+                    <a href="https://medium.com/popul-ar/16-ar-fashion-outfits-presented-during-2021-fall-fashion-weeks-2a6e195fb2e8" target="_blank" class="view-links-button">Read</a>
+                </div>
+            </div>
+
+            <h2 style="color: #fff; font-size: 50px; z-index: 0; text-shadow: -1rem 0 3rem rgba(0, 0, 0, 1);" id="contact">Let's work together</h2>
+            
+            <div class="contact">
+                <!--<form action="mail.php">
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text">
+
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text">
+
+                    <label for="lname">Email Address</label>
+                    <input id="email" type="email">
+
+                    <label for="subj">Subject</label>
+                    <input id="subj" type="text">
+
+                    <label for="msg">Message</label>
+                    <textarea id="msg" name="message"></textarea>
+                </form>-->
+                <h4 class="normal-font-w" style="margin-bottom: 50px;">I'm open to work, and I'm always looking forward to connecting with cool people!</h4>
+                
+                <a href="mailto:nicolakazakov@gmail.com" class="contact-email">hello@nickazak.com</a>
+
+                <div class="socials">
+                    <a href="https://www.snapchat.com/add/nikazakov" target="_blank"><img src="img/socials/snapchat.png" width="30px"></a>
+                    <a href="https://instagram.com/nickazak" target="_blank"><img src="img/socials/instagram.png" width="35px"></a>
+                    <a href="https://twitter.com/nickazak" target="_blank"><img src="img/socials/twitter.png" width="34px"></a>
+                    <a href="https://www.linkedin.com/in/nick-kazakov-7a321618a" target="_blank"><img src="img/socials/linkedin.png" width="30px"></a>
+                    <a href="https://github.com/nickazakov" target="_blank"><img src="img/socials/github.png" width="38px"></a>
+                </div>
+
+                <img src="SLN Developer Badge.png" width="100px" style="margin-top: 50px;">
+            </div>
+
+            <div id="footer">
+
+                <h4>© Copyright 2022</h4>
+        
+            </div>
+
+    </div>
+</div>
+
+<script src="vanilla-tilt.js"></script>
+<!-- Landing Script -->
+<script src="landing.js"></script>
+<!-- Gradient Initialization -->
+<script>
+    var gradient = new Gradient()
+    gradient.initGradient('#gradient-canvas');
+
+    var gradient2 = new Gradient()
+    gradient2.initGradient('#gradient-canvas2');
+</script>
+</body>
+</html>

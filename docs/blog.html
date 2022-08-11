@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Background Gradient Script -->
+    <script src="gradient.js"></script>
+
+    <!-- Landing Script -->
+    <script src="landing.js"></script>
+
+    <title>GrowPile</title>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<!-- Background Gradient Styles [KEEP ON HTML] -->
+<style>
+#gradient-canvas {
+    --gradient-color-1: #0d0347;
+    --gradient-color-2: #154609;
+    --gradient-color-3: #22d499;
+    --gradient-color-4: #0080f8;
+    }
+</style>
+
+<body>
+<!-- Gradient Canvas -->
+<canvas onclick="" id="gradient-canvas"></canvas>
+
+<!-- Gradient Initialization -->
+<script>
+    var gradient = new Gradient()
+    gradient.initGradient('#gradient-canvas');
+</script>
+
+<!-- Fade Black Background -->
+<div id="fader"></div>
+
+<!-- Header -->
+<header>
+    <!-- Logo -->
+    <img class="logo" src="gp-new.svg" alt="" width="130px">
+
+    <!-- Desktop Navbar -->
+    <nav id="content-desktop">
+        <ul>
+            <li><a href="index.html" id="null" >Home</a></li>
+            <li><a href="portfolio.html" id="null" >Portfolio</a></li>
+            <li><a href="ar.html" id="null" >Augmented Reality</a></li>
+            <li><a href="blog.html" id="active-tab" >Blog</a></li>
+            <li><a href="about.html" id="null" >About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <div id="content-desktop" class="transpill" onclick="ctaclick()">
+        <a href="#" class="cta">Get in touch</a>
+        <span class="material-icons">chevron_right</span>
+    </div>
+
+    <!-- Mobile Navbar -->
+    <div id="content-mobile">
+
+        <!-- Mobile Burger Menu -->
+        <div onclick="" id="mobile-pill-menu" class="transpill">
+            <span class="material-icons-round" id="act">menu</span>
+        </div>
+        
+        <!-- Burger Dropdown -->
+        <div class="dropdown-area">
+            <div class="dropdown-menu">
+
+                <!-- Item #1 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">chevron_right</span>
+                    <a class="dropdown-items">Get in touch</a>
+                </div>
+                
+                <div class="stripe"></div>
+
+                <!-- Item #2 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">home</span>
+                    <a class="dropdown-items">Home</a>
+                </div>
+
+                <!-- Item #3 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">dashboard</span>
+                    <a class="dropdown-items">Portfolio</a>
+                </div>
+
+                <!-- Item #4 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">view_in_ar</span>
+                    <a class="dropdown-items">Augmented Reality</a>
+                </div>
+
+                <!-- Item #5 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">article</span>
+                    <a class="dropdown-items">Blog</a>
+                </div>
+
+                <!-- Item #6 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">favorite</span>
+                    <a class="dropdown-items">About</a>
+                </div>
+
+                <div class="stripe"></div>
+
+                <!-- Item #7 -->
+                <div>
+                    <span class="material-icons-round" style="padding-left: 10px; vertical-align: -5.5px;">code</span>
+                    <a class="dropdown-items">Business Resources</a>
+                </div>
+
+                <!-- Item #8 -->
+                <div>
+                    <span class="material-icons" style="padding-left: 10px; vertical-align: -5.5px;">help_outline</span>
+                    <a class="dropdown-items">Support</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!-- Page Content -->
+<div id="main-page">
+
+    <!-- First Glance Content -->
+    <div id="landing content" style="display: flex; margin: 50px 0px 100px 0px; justify-content: space-between; align-items: flex-end;">
+
+        <h2 style="position: absolute; color: #fff; margin-bottom: 170px;">Europe's leading</h2>
+
+        <!-- Hero Text -->
+        <div style="display: flex;">
+            <h1 id="hero-txt">Blog</h1>
+        </div>
+
+        <h2 style="position: absolute; color: #fff;">AR / VR / Reality Marketing +++</h2>
+    </div>
+
+    <!-- Panel #1 Title -->
+    <h1 id="ot-1w">Latest Blogpost</h1>
+
+    <div id="articles">
+
+        <!-- Article -->
+        <article>
+            <img src="cover.png" style="max-width:100%; border-radius: 8px 8px 0px 0px; ">
+            <div id="fader-article"></div>
+            <div id="preview-content">
+                <h2>SPS2022: What's new!</h2>
+                <p>Snapchat unveiled some great new features in this year's Partner Summit! Let's see how your business can take advantage of them today.</p>
+            </div>
+        </article>
+
+        <!-- Article -->
+        <article>
+            <img src="cover.png" style="max-width:100%; border-radius: 8px 8px 0px 0px; ">
+            <div id="fader-article"></div>
+            <div id="preview-content">
+                <h2>Reality Marketing</h2>
+                <p>Snapchat unveiled some great new features in this year's Partner Summit! Let's see how your business can take advantage of them today.</p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <h4>© 2022 GrowPile Digital. All Rights Reserved.</h4>
+
+    </div>
+</div>
+
+<script src="vanilla-tilt.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.growpile.com/$1 [R,L]
+
+DirectoryIndex index.html
+
+ErrorDocument 400 https://growpile.com/bad-request
+ErrorDocument 401 https://growpile.com/auth-reqd
+ErrorDocument 403 https://growpile.com/forbid
+ErrorDocument 404 https://growpile.com/not-found
+ErrorDocument 500 https://growpile.com/server-err
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
